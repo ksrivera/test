@@ -16,10 +16,6 @@ import CardComponent from '@/components/CardComponent/CardComponent'
 
 //import Hero from 'public/assets/images/hero_2.jpg'
 
-export const metadata = {
-  title: 'Home | UCode Clinic',
-  description: 'UCode Clinic Home Page',
-};
 
 export default function Home() {
   //const { data, error, isLoading } = useSWR('/api/user', fetcher);
