@@ -7,10 +7,9 @@ export const metadata = {
 }
 
 const EventPage = () => {
-  
-
   return (
     <div className='max-w-screen-xl mx-auto pt-10 pb-10'>
+      
       <Timeline/>
       <BackToTop />
     </div>

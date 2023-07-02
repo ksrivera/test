@@ -8,16 +8,15 @@ export const metadata = {
 
 const LoadingPage = () => {
   return (
-    <div>|
-      <Image
-      priority
-      src="/assets/images/loading.svg"
-      height={32}
-      width={32}
-      alt="loading icon"
-    />
+    <div className='max-w-screen-xl h-screen mx-auto flex items-center justify-center'>
+        <Image
+          src="/assets/images/loading.svg"
+          height={100}
+          width={100}
+          alt="loading icon"
+        />
     </div>
   )
 }
 
-export default LoadingPage
+export default LoadingPage;

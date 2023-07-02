@@ -1,4 +1,16 @@
+'use client'
+
+import { useState } from "react"
+
+//need ng setToggle
+
 const ContactForm = () => {
+    const [toggle, setToggle] = useState(false);
+
+    const handleToggle = () => {
+
+    }
+
     return (
       <div className="container my-24 mx-auto md:px-6">
         <section className="mb-32">
@@ -10,10 +22,14 @@ const ContactForm = () => {
                 <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:px-3 lg:mb-0 lg:w-5/12 lg:px-6">
                   <form>
                     <div className="relative mb-6" data-te-input-wrapper-init>
-                      <label className='block text-green-700 text-sm font-bold mb-2' for='contactPageName'>Name</label>
+                      <label className='block text-green-700 text-sm font-bold mb-2' for='contactPageFirstName'>First Name</label>
                       <input type="text"
-                        className="text-green-700 peer block min-h-[auto] w-full rounded py-[0.32rem] px-3 leading-[1.6] border-none" id="contactPageName" placeholder="Name" />
-
+                        className="text-green-700 peer block min-h-[auto] w-full rounded py-[0.32rem] px-3 leading-[1.6] border-none" id="contactPageFirstName" placeholder="Name" />
+                    </div>
+                    <div className="relative mb-6" data-te-input-wrapper-init>
+                      <label className='block text-green-700 text-sm font-bold mb-2' for='contactPageLastName'>Last Name</label>
+                      <input type="text"
+                        className="text-green-700 peer block min-h-[auto] w-full rounded py-[0.32rem] px-3 leading-[1.6] border-none" id="contactPageLastName" placeholder="Name" />
                     </div>
                     <div className="relative mb-6" data-te-input-wrapper-init>
                     <label className='block text-green-700 text-sm font-bold mb-2' for='contactPageEmail'>Email</label>
@@ -30,8 +46,8 @@ const ContactForm = () => {
                         Send me a copy of this message
                       </label>
                     </div>
-                    <button type="button" data-te-ripple-init data-te-ripple-color="light"
-                      className="mb-6 inline-block w-full rounded bg-emerald-400 px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0  active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]   lg:mb-0">
+                    {/* SUBMIT */}
+                    <button type="submit" data-te-ripple-init data-te-ripple-color="light" className="mb-6 inline-block w-full rounded bg-emerald-400 px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0  active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]   lg:mb-0">
                       Send
                     </button>
                   </form>
