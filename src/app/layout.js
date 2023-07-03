@@ -1,5 +1,7 @@
+import AuthProvider from '@/components/AuthProvider/AuthProvider';
 import './globals.css'
 import { Fira_Sans } from 'next/font/google'
+import ToasterProvider from '@/components/ToasterProvider/ToasterProvider';
 
 export const metadata = {
   title: 'Error 404 | UCode Clinic',
@@ -15,9 +17,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${firaSans.className}`}>
-
-          {children}
-
+          <AuthProvider>
+            <ToasterProvider/>
+            {children}
+          </AuthProvider>
       </body>
     </html>
   )

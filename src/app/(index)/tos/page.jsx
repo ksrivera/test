@@ -7,7 +7,9 @@ export const metadata = {
 };
 
 const getData = async () => {
-  const res = await fetch('http://localhost:3000/api/tos')
+  const res = await fetch('http://localhost:3000/api/tos', {
+    next: { revalidate: 10 }
+})
 
   if(!res.ok){
       throw new Error('Something went wrong while fetching data.');
@@ -17,7 +19,6 @@ const getData = async () => {
 }
 const ToSPage = async () => {
   const data = await getData();
-  console.log(data);
 
   return (
     <div className='max-w-full mx-auto bg-emerald-200'>
@@ -30,8 +31,8 @@ const ToSPage = async () => {
         <div className='bg-green-200 pt-10'>
           {data.map(item => (
               <div className='max-w-screen-2xl mx-auto pb-10'>
-                  <p class="mb-3 text-lg text-gray-500 md:text-xl text-green-500"><strong>{item.title}</strong></p>
-                  <p class="text-gray-500">{item.description}</p>
+                  <p className="mb-3 text-lg md:text-xl text-green-500"><strong>{item.title}</strong></p>
+                  <p className="text-gray-500">{item.description}</p>
               </div>
           ))}
         </div>

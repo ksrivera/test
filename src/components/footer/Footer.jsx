@@ -67,10 +67,10 @@ const Footer = () => {
                         <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Resources</h2>
                         <ul className="text-emerald-900 font-medium">
                             <li className="mb-4">
-                                <a href="https://flowbite.com/" className="hover:underline hover:text-red-400">Flowbite</a>
+                                <a href="https://flowbite.com/" className="hover:underline hover:text-red-400">Health News</a>
                             </li>
                             <li>
-                                <a href="https://tailwindcss.com/" className="hover:underline hover:text-red-400">Tailwind CSS</a>
+                                <a href="https://tailwindcss.com/" className="hover:underline hover:text-red-400">World Health Organization</a>
                             </li>
                         </ul>
                     </div>
@@ -78,10 +78,16 @@ const Footer = () => {
                         <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Follow us</h2>
                         <ul className="text-emerald-900  font-medium">
                             <li className="mb-4">
-                                <a href="https://github.com/themesberg/flowbite" className="hover:underline hover:text-red-400">Github</a>
+                                <a href="https://github.com" className="hover:underline hover:text-red-400">Github</a>
+                            </li>
+                            <li className="mb-4">
+                                <a href="https://discord.gg" className="hover:underline hover:text-red-400">Discord</a>
+                            </li>
+                            <li className="mb-4">
+                                <a href="https://facebook.com" className="hover:underline hover:text-red-400">Facebook</a>
                             </li>
                             <li>
-                                <a href="https://discord.gg/4eeurUVvTy" className="hover:underline hover:text-red-400">Discord</a>
+                                <a href="https://whatsapp.com" className="hover:underline hover:text-red-400">WhatsApp</a>
                             </li>
                         </ul>
                     </div>

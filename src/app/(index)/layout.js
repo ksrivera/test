@@ -1,16 +1,8 @@
 import Navbar from '@/components/navbar/Navbar'
-import './globals.css'
-import { Inter } from 'next/font/google'
 import Footer from '@/components/footer/Footer'
-import AuthProvider from '@/components/AuthProvider/AuthProvider'
-import { Fira_Sans } from 'next/font/google'
-//import "tw-elements/dist/css/tw-elements.min.css";
+import ToasterProvider from '@/components/ToasterProvider/ToasterProvider'
+//import AuthProvider from '@/components/AuthProvider/AuthProvider'
 
-const inter = Inter({ subsets: ['latin'] })
-const firaSans = Fira_Sans({
-  subsets: ['latin'],
-  weight: ['400']
-})
 
 export const metadata = {
   title: 'Home | UCode Clinic',
@@ -19,14 +11,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${firaSans.className} bg-emerald-200`}>
-        <AuthProvider>
+    <div className='bg-emerald-200'>
+          <ToasterProvider />
           <Navbar/>
           {children}
           <Footer/>
-        </AuthProvider>
-      </body>
-    </html>
+    </div>
   )
 }

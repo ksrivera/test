@@ -1,7 +1,36 @@
-import React from 'react'
+'use client'
+
 import Link from 'next/link'
+import { useState } from 'react'
+import { signIn, useSession } from 'next-auth/react'
+import { toast } from 'react-hot-toast'
+import { useRouter } from 'next/navigation'
 
 const AdminSignIn = () => {
+    const session = useSession();
+    const router = useRouter();
+
+    const [data, setData] = useState({
+        email: '',
+        password: '',
+    });
+
+    const loginUser = async (e) => {
+        e.preventDefault();
+        signIn('credentials', { ...data, redirect: false })
+        .then((callback) => {
+            if (callback?.error) {
+                toast.error(callback.error);
+            } 
+            
+            if (callback?.ok && !callback?.error) {
+                toast.success('Logged in successfully!');
+                router.push('/dashboard2');
+            }
+
+            
+        });
+    }
   return (
     <div>
         <section class="bg-gray-50 ">
@@ -15,11 +44,21 @@ const AdminSignIn = () => {
                         <form class="space-y-4 md:space-y-6" action="#">
                             <div>
                                 <label for="email" class="block mb-2 text-sm font-medium text-emerald-900 ">Email</label>
-                                <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-emerald-900 sm:text-sm rounded-lg focus:ring-green-500 focus:border-green-600 block w-full p-2.5 " placeholder="name@company.com" required=""/>
+                                <input name="email"
+                                  type="email"
+                                  value={data.email}
+                                  onChange={ e => setData({ ...data, email: e.target.value })}
+                                  required class="bg-gray-50 border border-gray-300 text-emerald-900 sm:text-sm rounded-lg focus:ring-green-500 focus:border-green-600 block w-full p-2.5 " placeholder="name@company.com" required=""/>
                             </div>
                             <div>
                                 <label for="password" class="block mb-2 text-sm font-medium text-emerald-900 ">Password</label>
-                                <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-emerald-900 sm:text-sm rounded-lg focus:border-green-600 focus:ring-green-500 focus:green-primary-600 block w-full p-2.5 " required=""/>
+                                <input id="password"
+                                  name="password"
+                                  type="password"
+                                  autoComplete="current-password"
+                                  value={data.password}
+                                  onChange={ e => setData({ ...data, password: e.target.value })}
+                                  required placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-emerald-900 sm:text-sm rounded-lg focus:border-green-600 focus:ring-green-500 focus:green-primary-600 block w-full p-2.5 " required=""/>
                             </div>
                             <div class="flex items-center justify-between">
                                 <div class="flex items-start">
