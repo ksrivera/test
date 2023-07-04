@@ -46,7 +46,7 @@ export const authOptions = {
                     throw new Error('Please enter a valid email and password!');
                 }
 
-                const user = await clientPromise.User.findOne({
+                const user = await client.user.findUnique({
                     where: {
                         email: credentials.email
                     }
