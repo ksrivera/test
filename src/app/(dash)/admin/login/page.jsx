@@ -46,7 +46,7 @@ const AdminLogin = () => {
                                   type="email"
                                   value={data.email}
                                   onChange={ e => setData({ ...data, email: e.target.value })}
-                                  required className="bg-gray-50 border border-gray-300 text-emerald-900 sm:text-sm rounded-lg focus:ring-green-500 focus:border-green-600 block w-full p-2.5 " placeholder="name@company.com" required=""/>
+                                  required className="bg-gray-50 border border-gray-300 text-emerald-900 sm:text-sm rounded-lg focus:ring-green-500 focus:border-green-600 block w-full p-2.5 " placeholder="name@company.com"/>
                             </div>
                             <div>
                                 <label htmlFor="password" className="block mb-2 text-sm font-medium text-emerald-900 ">Password</label>
@@ -56,18 +56,7 @@ const AdminLogin = () => {
                                   autoComplete="current-password"
                                   value={data.password}
                                   onChange={ e => setData({ ...data, password: e.target.value })}
-                                  required placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-emerald-900 sm:text-sm rounded-lg focus:border-green-600 focus:ring-green-500 focus:green-primary-600 block w-full p-2.5 " required=""/>
-                            </div>
-                            <div className="flex items-center justify-between">
-{/*                                 <div className="flex items-start">
-                                    <div className="flex items-center h-5">
-                                    <input id="remember" aria-describedby="remember" type="checkbox" className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 " required=""/>
-                                    </div>
-                                    <div className="ml-3 text-sm">
-                                    <label htmlFor="remember" className="text-emerald-500 ">Remember me</label>
-                                    </div>
-                                </div> */}
-                                <a href="#" className="text-sm font-medium text-emerald-600 hover:underline ">Forgot password?</a>
+                                  required placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-emerald-900 sm:text-sm rounded-lg focus:border-green-600 focus:ring-green-500 focus:green-primary-600 block w-full p-2.5"/>
                             </div>
                              <button type="submit" className="w-full mx-auto text-white items-center justify-center bg-green-400 hover:bg-green-500 focus:ring-4 focus:outline-none focus:ring-emerald-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Sign in</button> 
 

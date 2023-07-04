@@ -56,7 +56,7 @@ const StudentSignIn = () => {
                                   type="email"
                                   value={data.email}
                                   onChange={ e => setData({ ...data, email: e.target.value })}
-                                  required className="bg-gray-50 border border-gray-300 text-emerald-900 sm:text-sm rounded-lg focus:ring-green-500 focus:border-green-600 block w-full p-2.5 " placeholder="name@email.com" required=""/>
+                                  required className="bg-gray-50 border border-gray-300 text-emerald-900 sm:text-sm rounded-lg focus:ring-green-500 focus:border-green-600 block w-full p-2.5 " placeholder="name@email.com"/>
                             </div>
                             <div>
                                 <label htmlFor="password" className="block mb-2 text-sm font-medium text-emerald-900 ">Password</label>
@@ -66,7 +66,7 @@ const StudentSignIn = () => {
                                   autoComplete="current-password"
                                   value={data.password}
                                   onChange={ e => setData({ ...data, password: e.target.value })}
-                                  required placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-emerald-900 sm:text-sm rounded-lg focus:border-green-600 focus:ring-green-500 focus:green-primary-600 block w-full p-2.5 " required=""/>
+                                  required placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-emerald-900 sm:text-sm rounded-lg focus:border-green-600 focus:ring-green-500 focus:green-primary-600 block w-full p-2.5"/>
                             </div>
                             <div className="flex items-center justify-between">
                             </div>  
