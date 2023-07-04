@@ -4,12 +4,7 @@ import GithubProvider from 'next-auth/providers/github';
 import CredentialsProvider from "next-auth/providers/credentials";
 
 import Email from "next-auth/providers/email"
-import connect from "@/utils/db";
 import bcrypt from 'bcryptjs'
-
-//MongoDB
-import { MongoDBAdapter } from "@auth/mongodb-adapter"
-import clientPromise from "@/libs/mongodb";
 
 //Prisma
 import client from "@/libs/prismadb";
