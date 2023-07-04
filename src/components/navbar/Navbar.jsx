@@ -33,11 +33,11 @@ const Navbar = () => {
                                 <span className={pathname == '/signin/student' ? 'py-2 px-4 bg-green-200 rounded-lg text-slate-800 hover:bg-none' : 'py-2 px-4 hover:bg-green-200 hover:text-slate-800 rounded-lg transition-colors'}>Student</span>
                             </Link>
                         </li>
-                        <li>
+{/*                         <li>
                             <Link className='py-2 pl-3 pr-4 hover:bg-green-200 hover:text-slate-800 rounded-lg transition-colors' href='/signin/employee'>
                                 <span className={pathname == '/signin/employee' ? 'py-2 px-4 bg-green-200 rounded-lg text-slate-800 hover:bg-none' : 'py-2 px-4 hover:bg-green-200 hover:text-slate-800 rounded-lg transition-colors'}>Staff</span>
                             </Link>
-                        </li>
+                        </li> */}
                         <li>
                             <Link className='py-2 pl-3 pr-4 hover:bg-green-200 hover:text-slate-800 rounded-lg transition-colors' href='/register'>
                                 <span className={pathname == '/register' ? 'py-2 px-4 bg-green-200 rounded-lg text-slate-800 hover:bg-none' : 'py-2 px-4 hover:bg-green-200 hover:text-slate-800 rounded-lg transition-colors'}>Register</span>

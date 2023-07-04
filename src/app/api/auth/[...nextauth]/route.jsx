@@ -17,7 +17,7 @@ import { PrismaAdapter } from "@next-auth/prisma-adapter";
 
 
 export const authOptions = {
-    adapter: MongoDBAdapter(clientPromise),
+    adapter: PrismaAdapter(client),
     providers: [
         GoogleProvider({
             clientId: process.env.GOOGLE_CLIENT_ID,
@@ -51,7 +51,7 @@ export const authOptions = {
                     throw new Error('Please enter a valid email and password!');
                 }
 
-                const user = await clientPromise.user.findUnique({
+                const user = await clientPromise.User.findOne({
                     where: {
                         email: credentials.email
                     }
@@ -74,10 +74,12 @@ export const authOptions = {
             },
         }),
     ],
+
     secret: process.env.SECRET,
     session: {
         strategy: 'jwt',
     },
+
     debug: process.env.NODE_ENV === 'development',
 }
 

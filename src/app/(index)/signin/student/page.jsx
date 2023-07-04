@@ -31,7 +31,7 @@ const StudentSignIn = () => {
             
             if (callback?.ok && !callback?.error) {
                 toast.success('Logged in successfully!');
-                router.push('/dashboard2');
+                router.push('/student/dashboard');
             }
 
             
@@ -83,11 +83,11 @@ const StudentSignIn = () => {
                              <p className='w-full flex flex-col items-center mx-auto text-lg text-green-400'>Or</p>
                              <div className='w-full mx-auto flex text-white items-center justify-center bg-green-400 hover:bg-green-500 focus:ring-4 focus:outline-none focus:ring-emerald-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center'>
                                 <FcGoogle className='text-2xl'/>
-                                <button type="button" onClick={() => signIn('google')} className="pl-1"> Google</button> 
+                                <button type="button" onClick={() => signIn('google', {callbackUrl: '/student/dashboard'})} className="pl-1"> Google</button> 
                              </div>
                              <div className='w-full mx-auto flex text-white items-center justify-center bg-green-400 hover:bg-green-500 focus:ring-4 focus:outline-none focus:ring-emerald-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center'>
                                 <AiFillGithub className='text-2xl'/>
-                                <button type="button" onClick={() => signIn('github')}  className="pl-1"> GitHub</button> 
+                                <button type="button" onClick={() => signIn('github', {callbackUrl: '/student/dashboard'})}  className="pl-1"> GitHub</button> 
                              </div>
                              <div className='w-full mx-auto flex text-white items-center justify-center bg-green-400 hover:bg-green-500 focus:ring-4 focus:outline-none focus:ring-emerald-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center'>
                                 <BsFacebook className='text-2xl'/>
@@ -98,7 +98,7 @@ const StudentSignIn = () => {
 
                             <p className="text-sm font-light text-gray-500">
                                 <span className='pr-2'>Don’t have an account yet?</span>
-                                <Link href="#" className="font-medium text-green-600 hover:underline">
+                                <Link href="/register" className="font-medium text-green-600 hover:underline">
                                     Sign Up
                                 </Link>
                             </p>
