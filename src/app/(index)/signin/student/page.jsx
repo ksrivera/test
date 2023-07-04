@@ -69,15 +69,6 @@ const StudentSignIn = () => {
                                   required placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-emerald-900 sm:text-sm rounded-lg focus:border-green-600 focus:ring-green-500 focus:green-primary-600 block w-full p-2.5 " required=""/>
                             </div>
                             <div className="flex items-center justify-between">
-               {/*                  <div className="flex items-start">
-                                    <div className="flex items-center h-5">
-                                    <input id="remember" aria-describedby="remember" type="checkbox" className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 " required=""/>
-                                    </div>
-                                    <div className="ml-3 text-sm">
-                                    <label htmlFor="remember" className="text-emerald-500 ">Remember me</label>
-                                    </div>
-                                </div> */}
-                                {/* <a href="#" className="text-sm font-medium text-emerald-600 hover:underline ">Forgot password?</a> */}
                             </div>  
                              <button type="submit" className="w-full mx-auto text-white items-center justify-center bg-green-400 hover:bg-green-500 focus:ring-4 focus:outline-none focus:ring-emerald-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Sign in</button> 
                              <p className='w-full flex flex-col items-center mx-auto text-lg text-green-400'>Or</p>
@@ -93,9 +84,6 @@ const StudentSignIn = () => {
                                 <BsFacebook className='text-2xl'/>
                                 <button type="button" className="pl-1"> Facebook</button> 
                              </div>
-
-                        {/* <Link href=""> <button type="button" className="text-white bg-gradient-to-r bg-green-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 mt-3">Login</button></Link> */}
-
                             <p className="text-sm font-light text-gray-500">
                                 <span className='pr-2'>Don’t have an account yet?</span>
                                 <Link href="/register" className="font-medium text-green-600 hover:underline">
