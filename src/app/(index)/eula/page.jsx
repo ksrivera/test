@@ -1,27 +1,13 @@
-'use client'
-
 import BackToTop from "@/components/BackToTop/BackToTop";
-//import useSWR from 'swr';
 
+export default async function LicensePage(){
+  const res = await fetch('http://localhost:3000/api/eula');
 
-const getData = async () => {
-    const res = await fetch('http://localhost:3000/api/eula', {
-      next: { revalidate: 10 }
-  })
-  
-    if(!res.ok){
-        throw new Error('Something went wrong while fetching data.');
-    }
-  
-    return res.json();
-  } 
-  
-//const fetcher = (...args) => fetch(...args).then((res) => res.json())
+  if(!res.ok){
+      throw new Error('Something went wrong while fetching data.');
+  }
 
-const LicensePage = async () => {
-  //const { data, error } = useSWR('/api/eula', fetcher);
-  const data = await getData();
-  let i = 0;
+  const data = await res.json();
 
   return (
     <div className='max-w-full mx-auto bg-emerald-200'>
@@ -33,7 +19,7 @@ const LicensePage = async () => {
         </section>
         <div className='bg-green-200 pt-10'>
             {data.map(item => (
-                <div className='max-w-screen-2xl mx-auto pb-10' key={i++}>
+                <div className='max-w-screen-2xl mx-auto pb-10' keys={item.title}>
                     <p className="mb-3 text-lg  md:text-xl text-green-500"><strong>{item.title}</strong></p>
                     <p className="text-gray-500">{item.description}</p>
                 </div>

@@ -1,16 +1,14 @@
 export const metadata = {
-    title: 'About | UCode Clinic',
-    description: 'UCode Clinic Admin Dashboard Page'
-  };
-  
-  const EulaLayout = ({ children }) => {
-      return (
-          <html lang="en" className="bg-green-200 h-screen">
-            <body>
-                {children}
-            </body>
-          </html>
-      );
-  }
-  
-  export default EulaLayout;
+  title: 'About Us | UCode Clinic',
+  description: 'UCode Clinic Admin Dashboard Page'
+};
+
+const AboutLayout = ({ children }) => {
+    return (
+      <div>
+        {children}
+      </div>
+    );
+}
+
+export default AboutLayout;

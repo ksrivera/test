@@ -1,15 +1,11 @@
 'use client'
 
-
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { signIn, signOut, useSession, getProviders } from 'next-auth/react';
 
 const Navbar = () => {
     const pathname = usePathname();
-    const { data: session } = useSession();
-
   return (
     <div>
         <div className='bg-emerald-300'>

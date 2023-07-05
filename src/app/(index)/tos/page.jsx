@@ -1,22 +1,14 @@
-//'use client'
-
 import BackToTop from "@/components/BackToTop/BackToTop";
 
-const getData = async () => {
-  const res = await fetch('http://localhost:3000/api/tos', {
-    next: { revalidate: 10 }
-})
+export default async function ToSPage(){
+  const res = await fetch('http://localhost:3000/api/tos');
 
   if(!res.ok){
       throw new Error('Something went wrong while fetching data.');
   }
 
-  return res.json();
-}
+  const data = await res.json();
 
-const ToSPage = async () => {
-  //let data = null;
-  const data = await getData();
   let i = 0;
 
   return (

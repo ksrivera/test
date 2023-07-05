@@ -13,13 +13,13 @@ const firaSans = Fira_Sans({
   weight: ['400']
 })
 
-export default function RootLayout({ children }) {
+export default function IndexLayout({ children }) {
   return (
-    <div className='bg-emerald-200'>
-          <ToasterProvider />
-          <Navbar/>
-          {children}
-          <Footer/>
+    <div className='bg-emerald-100'> 
+        <ToasterProvider />
+        <Navbar/>
+        {children}
+        <Footer/>
     </div>
   )
 }

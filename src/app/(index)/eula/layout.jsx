@@ -3,14 +3,12 @@ export const metadata = {
     description: 'UCode Clinic Admin Dashboard Page'
   };
   
-  const EulaLayout = ({ children }) => {
+const EulaLayout = ({ children }) => {
       return (
-          <html lang="en" className="bg-green-200 h-screen">
-            <body>
-                {children}
-            </body>
-          </html>
+        <div>
+            {children}
+        </div>
       );
   }
   
-  export default EulaLayout;
+export default EulaLayout;
