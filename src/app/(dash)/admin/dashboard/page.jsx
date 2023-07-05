@@ -14,9 +14,9 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
-import PieComponent from "src/components/piecomponent/PieComponent";
 
-import CardComponent from "src/components/cardcomponent/CardComponent";
+
+
 import AdminDashNavbar from '@/components/AdminNavbar/AdminDashNavbar';
 import AdminSidebar from '@/components/AdminSidebar/AdminSidebar';
 
