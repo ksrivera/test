@@ -1,3 +1,5 @@
+'use client'
+
 const getData = async () => {
     const res = await fetch('http://localhost:3000/api/timeline', {
         next: { revalidate: 10 }
@@ -11,7 +13,8 @@ const getData = async () => {
 }
 
 const Timeline = async () => {
-    const data = await getData();
+    let data = null;
+    data = await getData();
     console.log(data);
     let i = 0;
     

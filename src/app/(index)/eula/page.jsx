@@ -2,16 +2,21 @@
 
 import BackToTop from "@/components/BackToTop/BackToTop";
 
-const LicensePage = async () => {
+const getData = async () => {
     const res = await fetch('http://localhost:3000/api/eula', {
-        next: { revalidate: 10}
-    })
-
+      next: { revalidate: 10 }
+  })
+  
     if(!res.ok){
         throw new Error('Something went wrong while fetching data.');
     }
-
-  const data = await res.json();
+  
+    return res.json();
+  }
+  
+const LicensePage = async () => {
+    let data = null;
+    data = await res.json();
   let i = 0;
 
   return (

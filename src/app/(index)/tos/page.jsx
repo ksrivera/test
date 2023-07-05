@@ -13,8 +13,10 @@ const getData = async () => {
 
   return res.json();
 }
+
 const ToSPage = async () => {
-  const data = await getData();
+  let data = null;
+  data = await getData();
   let i = 0;
 
   return (
