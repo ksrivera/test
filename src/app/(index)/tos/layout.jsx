@@ -1,5 +1,5 @@
 export const metadata = {
-    title: 'License (EULA) | UCode Clinic',
+    title: 'Terms & Conditions | UCode Clinic',
     description: 'UCode Clinic Admin Dashboard Page'
   };
   
