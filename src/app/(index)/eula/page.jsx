@@ -1,3 +1,5 @@
+'use client'
+
 import BackToTop from "@/components/BackToTop/BackToTop";
 
 export const metadata = {
