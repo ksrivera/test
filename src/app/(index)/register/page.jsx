@@ -1,27 +1,12 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/htmlForms'),
-    ],
-  }
-  ```
-*/
-
 'use client'
 
 import { useState } from "react"
 import axios from "axios";
 import { toast } from "react-hot-toast";
-import Link from "next/link";
-
+import { useRouter } from "next/navigation";
 
 export default function Register() {
+  const router = useRouter();
     const [data, setData] = useState({
         name: '',
         email: '',
@@ -31,8 +16,12 @@ export default function Register() {
     const registerUser = async e => {
         e.preventDefault();
         axios.post('http://localhost:3000/api/auth/register', data)
-        .then(() => toast.success('User has been registered!'))
-        .catch(() => toast.error('Something went wrong!'));
+        .then(() => {
+            toast.success('User has been registered!');
+            router.push('/signin/student');
+          }
+        )
+        .catch((e) => toast.error('Something went wrong!'));
 
     }
 

@@ -13,7 +13,7 @@ const Hero = () => {
                     <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
                         <div className="mr-auto place-self-center lg:col-span-7">
                             <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-white">Welcome to UCode School Clinic</h1>
-                            <p className="max-w-2xl mb-6 font-light text-slate-900 lg:mb-8 md:text-lg lg:text-2xl">Your Health, Our Priority: Empowering Students for Success</p>
+                            <p className="max-w-2xl mb-6 font-light text-white lg:mb-8 md:text-lg lg:text-2xl">Your Health, Our Priority: Empowering Students for Success</p>
 
                         </div>
                         <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
@@ -30,10 +30,10 @@ const Hero = () => {
                     <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
                         <div className="mr-auto place-self-center lg:col-span-7">
                             <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-white">United Nation SDG 2023</h1>
-                            <p className="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-2xl text-slate-900">In 2015, countries adopted the Sustainable Development Goals (SDGs) . They embarked on a journey to achieve the 2030 Agenda to promote prosperity, address inequalities while protecting the environment. The 17 SDGs offer the most practical and effective pathway to tackle the causes of poverty, violent conflict, human rights abuses, climate change and environmental degradation.</p>
+                            <p className="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-2xl text-white ">In 2015, countries adopted the Sustainable Development Goals (SDGs) . They embarked on a journey to achieve the 2030 Agenda to promote prosperity, address inequalities while protecting the environment. The 17 SDGs offer the most practical and effective pathway to tackle the causes of poverty, violent conflict, human rights abuses, climate change and environmental degradation.</p>
                         </div>
                         <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-                            <img className='rounded-lg' src="/assets/images/hero_1.jpg" alt="mockup"/>
+                            <img className='rounded-lg' src="/assets/images/WHO.jpg" alt="mockup"/>
                         </div>                
                     </div>
                 </section> 
@@ -44,11 +44,11 @@ const Hero = () => {
                 <section>
                     <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
                         <div className="mr-auto place-self-center lg:col-span-7">
-                            <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-white">School Clinic Digitization</h1>
-                            <p className="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-2xl text-slate-900">From checkout to global sales tax compliance, companies around the world use Flowbite to simplify their payment stack.</p>
+                            <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-white">Emergency Procedures</h1>
+                            <p className="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-2xl text-white ">Outline the steps to follow in case of a medical emergency within the school premises. Include contact numbers for emergency services and any specific protocols to be followed.</p>
                         </div>
                         <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-                            <img className='rounded-lg' src="/assets/images/hero_1.jpg" alt="mockup"/>
+                            <img className='rounded-lg' src="/assets/images/emergency.jpg" alt="mockup"/>
                         </div>                
                     </div>
                 </section> 
@@ -61,11 +61,11 @@ const Hero = () => {
                 <section>
                     <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
                         <div className="mr-auto place-self-center lg:col-span-7">
-                            <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-white">School Clinic Digitization</h1>
-                            <p className="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl text-slate-900">From checkout to global sales tax compliance, companies around the world use Flowbite to simplify their payment stack.</p>
+                            <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-white">Health Resources</h1>
+                            <p className="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl text-white ">Provide links or downloadable resources related to various health topics, preventive care, healthy living, and mental well-being. These resources can support students, parents, and staff in accessing helpful information.</p>
                         </div>
                         <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-                            <img className='rounded-lg' src="/assets/images/hero_1.jpg" alt="mockup"/>
+                            <img className='rounded-lg' src="/assets/images/resources.jpg" alt="mockup"/>
                         </div>                
                     </div>
                 </section> 
@@ -73,7 +73,7 @@ const Hero = () => {
 
 
             </ParallaxLayer>
-            <ParallaxLayer offset={3.5} speed={1}>
+{/*         <ParallaxLayer offset={5} speed={1}>
                 <section className="bg-transparent">
                     <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
                         <div className="font-light text-gray-500 sm:text-lg">
@@ -87,7 +87,7 @@ const Hero = () => {
                         </div>
                     </div>
                 </section>
-            </ParallaxLayer>
+            </ParallaxLayer> */}
         </Parallax> 
         <div> 
             

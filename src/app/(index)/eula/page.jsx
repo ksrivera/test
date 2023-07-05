@@ -7,7 +7,7 @@ export const metadata = {
   
 
 const getData = async () => {
-    const res = await fetch('/api/eula', {
+    const res = await fetch('http://localhost:3000/api/eula', {
         next: { revalidate: 10}
     })
 

@@ -14,7 +14,7 @@ export async function POST(request) {
         where: {
             email
         }
-    })
+    });
 
     if(exist) {
         throw new Error('Email already exists!');

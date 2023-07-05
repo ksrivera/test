@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgb(var(--background-end-rgb))
+      )
+      rgb(var(--background-start-rgb));
+  }
+  
+  .logo_nav{
+    padding-bottom: -30px;
+  }
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* #hero {
+    margin-top: 0;
+    padding: 0;
+    border: 0;
+    height: 100vh;
+    background: url("/background/hero6.jpg") ;
+    background-size: cover;
+    margin-bottom: -100px;
+  } */
+  
+  main {
+    height: 100vh;
+  }
+  
+  .hero{
+   /* display: flex; 
+   flex-direction: column;
+   
+   align-items: start; */
+  
+   height: 100vh;
+   
+   background: url("/background/hero6.jpg") ;
+   background-size: cover;
+  }
+  
+  .hero #hero-butn{
+    border: 0.5px #066826 solid;
+  }
+
+  .admission {
+    width: 800px;
+    margin-left: 250px;
+    margin-right: 100px;
+  }
+  .chilledadmission {
+    width: 600px;
+  }
+  .patient-queue {
+    width: 600px;
+  }
+  
+  

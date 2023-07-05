@@ -40,7 +40,7 @@ export const authOptions = {
                 password: {label: 'Password', type: 'password'},
                 username: {label: 'Username', type: 'text', placeholder: 'John Smith'},
             },
-            async authorize(credentials, req) {
+            async authorize(credentials) {
                 //check to see if email and password are there
                 if (!credentials.email || !credentials.password){
                     throw new Error('Please enter a valid email and password!');
