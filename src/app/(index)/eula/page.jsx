@@ -39,5 +39,3 @@ const LicensePage = async () => {
     </div>
   )
 }
-
-export default LicensePage
