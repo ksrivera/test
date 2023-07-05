@@ -5,8 +5,8 @@ export const metadata = {
     description: 'UCode Clinic EULA Page'
 };
   
-
 const getData = async () => {
+    
     const res = await fetch('http://localhost:3000/api/eula', {
         next: { revalidate: 10}
     })
@@ -20,6 +20,7 @@ const getData = async () => {
 
 const LicensePage = async () => {
   const data = await getData();
+  let i = 0;
 
   return (
     <div className='max-w-full mx-auto bg-emerald-200'>
@@ -31,7 +32,7 @@ const LicensePage = async () => {
         </section>
         <div className='bg-green-200 pt-10'>
             {data.map(item => (
-                <div className='max-w-screen-2xl mx-auto pb-10' key={item._id}>
+                <div className='max-w-screen-2xl mx-auto pb-10' key={i++}>
                     <p className="mb-3 text-lg  md:text-xl text-green-500"><strong>{item.title}</strong></p>
                     <p className="text-gray-500">{item.description}</p>
                 </div>

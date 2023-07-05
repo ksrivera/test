@@ -68,7 +68,6 @@ const data = [
 
 const AdminPage = () => {
     const { data: session } = useSession();
-    console.log(session?.user?.name)
 
   return (
     <div>

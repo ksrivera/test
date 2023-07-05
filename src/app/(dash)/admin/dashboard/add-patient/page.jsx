@@ -140,7 +140,7 @@ const AddPatient = () => {
               <br />
 
               <div className="flex justify-between">
-                <Link href="/dashboard">
+                <Link href="/admin/dashboard">
                   {" "}
                   <button
                     type="button"
@@ -149,7 +149,7 @@ const AddPatient = () => {
                     Cancel
                   </button>
                 </Link>
-                <Link href="#">
+                <Link href="/">
               
                   <button
                     type="button"
@@ -192,7 +192,7 @@ const AddPatient = () => {
               <strong>Symptom :</strong> Bruises / Skin Cut
             </p>
           </div>
-          <Link href="/dashboard/consultation">
+          <Link href="/">
             {" "}
             <button
               type="button"
@@ -229,7 +229,7 @@ const AddPatient = () => {
               <strong>Symptom :</strong> Burns
             </p>
           </div>
-          <Link href="/dashboard/consultation">
+          <Link href="/">
             {" "}
             <button
               type="button"
