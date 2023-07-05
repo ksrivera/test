@@ -1,6 +1,6 @@
 
 import EULA from "@/models/EULA";
-import connect from "@utils/db";
+import connect from "@/utils/db";
 import { NextResponse } from "next/server";
 
 export const GET = async (request) => {
