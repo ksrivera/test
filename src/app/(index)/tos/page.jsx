@@ -1,4 +1,4 @@
-'use client'
+//'use client'
 
 import BackToTop from "@/components/BackToTop/BackToTop";
 
@@ -15,8 +15,8 @@ const getData = async () => {
 }
 
 const ToSPage = async () => {
-  let data = null;
-  data = await getData();
+  //let data = null;
+  const data = await getData();
   let i = 0;
 
   return (
@@ -39,5 +39,3 @@ const ToSPage = async () => {
     </div>
   )
 }
-
-export default ToSPage

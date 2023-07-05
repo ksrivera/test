@@ -1,6 +1,8 @@
 'use client'
 
 import BackToTop from "@/components/BackToTop/BackToTop";
+//import useSWR from 'swr';
+
 
 const getData = async () => {
     const res = await fetch('http://localhost:3000/api/eula', {
@@ -12,11 +14,13 @@ const getData = async () => {
     }
   
     return res.json();
-  }
+  } 
   
+//const fetcher = (...args) => fetch(...args).then((res) => res.json())
+
 const LicensePage = async () => {
-    let data = null;
-    data = await res.json();
+  //const { data, error } = useSWR('/api/eula', fetcher);
+  const data = getData();
   let i = 0;
 
   return (
@@ -39,3 +43,4 @@ const LicensePage = async () => {
     </div>
   )
 }
+

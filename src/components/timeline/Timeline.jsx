@@ -1,9 +1,9 @@
-'use client'
+//'use client'
 
 
-import useSWR from 'swr'
+//import useSWR from 'swr'
 
-/* const getData = async () => {
+const getData = async () => {
     const res = await fetch('http://localhost:3000/api/timeline', {
         next: { revalidate: 10 }
     });
@@ -13,13 +13,13 @@ import useSWR from 'swr'
     }
 
     return res.json();
-} */
+} 
 
-const fetcher = (...args) => fetch(...args).then((res) => res.json())
+//const fetcher = (...args) => fetch(...args).then((res) => res.json())
 
 const Timeline = async () => {
-    const { data, error } = useSWR('http://localhost:3000/api/timeline', fetcher)
-
+    //const { data, error } = useSWR('http://localhost:3000/api/timeline', fetcher)
+    const data = getData();
     let i = 0;
     
   return (
@@ -38,5 +38,3 @@ const Timeline = async () => {
     </div>
   )
 }
-
-export default Timeline

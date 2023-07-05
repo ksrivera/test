@@ -1,5 +1,3 @@
-'use client'
-
 import BackToTop from "@/components/BackToTop/BackToTop";
 import Timeline from "@/components/timeline/Timeline";
 
