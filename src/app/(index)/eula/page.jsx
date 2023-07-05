@@ -4,9 +4,8 @@ export const metadata = {
     title: 'EULA | UCode Clinic',
     description: 'UCode Clinic EULA Page'
 };
-  
-const getData = async () => {
-    
+   
+async function getData  {
     const res = await fetch('http://localhost:3000/api/eula', {
         next: { revalidate: 10}
     })
