@@ -2,11 +2,6 @@
 
 import BackToTop from "@/components/BackToTop/BackToTop";
 
-export const metadata = {
-    title: 'EULA | UCode Clinic',
-    description: 'UCode Clinic EULA Page'
-};
-   
 const LicensePage = async () => {
     const res = await fetch('http://localhost:3000/api/eula', {
         next: { revalidate: 10}
@@ -15,8 +10,6 @@ const LicensePage = async () => {
     if(!res.ok){
         throw new Error('Something went wrong while fetching data.');
     }
-
-
 
   const data = await res.json();
   let i = 0;
