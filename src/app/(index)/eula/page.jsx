@@ -1,7 +1,7 @@
 import BackToTop from "@/components/BackToTop/BackToTop";
 
 export default async function LicensePage(){
-  const res = await fetch('http://127.0.0.1:5500/api/eula');
+  const res = await fetch('https://127.0.0.1:3000/api/eula');
 
   if(!res.ok){
       throw new Error('Something went wrong while fetching data.');

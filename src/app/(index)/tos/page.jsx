@@ -1,7 +1,7 @@
 import BackToTop from "@/components/BackToTop/BackToTop";
 
 export default async function ToSPage(){
-  const res = await fetch('http://127.0.0.1:5500/api/tos');
+  const res = await fetch('https://127.0.0.1:3000/api/tos');
 
   if(!res.ok){
       throw new Error('Something went wrong while fetching data.');

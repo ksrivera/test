@@ -1,7 +1,7 @@
 import BackToTop from "@/components/BackToTop/BackToTop";
 
 async function getData(){
-  const res = await fetch('http://127.0.0.1:3000/api/timeline');
+  const res = await fetch('https://127.0.0.1:3000/api/timeline');
 
   if(!res.ok){
       throw new Error('Something went wrong while fetching the timeline data');
