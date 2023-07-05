@@ -12,7 +12,7 @@ const getData = async () => {
   return res.json();
 } 
 
-const EventPage = async () => {
+export default async function EventPage() {
 
   const data = await getData();
 
