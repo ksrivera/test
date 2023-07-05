@@ -1,6 +1,6 @@
 import BackToTop from "@/components/BackToTop/BackToTop";
 
-export default async function ToSPage(){
+async function ToSPage(){
   const res = await fetch('https://127.0.0.1:3000/api/tos');
 
   if(!res.ok){
@@ -10,7 +10,6 @@ export default async function ToSPage(){
   const data = await res.json();
 
   let i = 0;
-
   return (
     <div className='max-w-full mx-auto bg-emerald-200'>
         <section>
