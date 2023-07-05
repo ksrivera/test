@@ -19,6 +19,8 @@ import {
 
 import AdminDashNavbar from '@/components/AdminNavbar/AdminDashNavbar';
 import AdminSidebar from '@/components/AdminSidebar/AdminSidebar';
+import PieComponent from '@/components/PieComponent/PieComponent';
+import CardComponent from '@/components/CardComponent/CardComponent';
 
 
 const data = [
@@ -80,8 +82,7 @@ const AdminPage = () => {
         </h1>
         <AdminDashNavbar/>
         <AdminSidebar/>
-
-      <CardComponent />
+        <CardComponent/>
    
       {/* For the Chart */}
 
