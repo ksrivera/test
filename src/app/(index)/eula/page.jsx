@@ -5,7 +5,7 @@ export const metadata = {
     description: 'UCode Clinic EULA Page'
 };
    
-async function getData()  {
+const LicensePage = async () => {
     const res = await fetch('http://localhost:3000/api/eula', {
         next: { revalidate: 10}
     })
@@ -14,11 +14,9 @@ async function getData()  {
         throw new Error('Something went wrong while fetching data.');
     }
 
-    return res.json();
-}
 
-const LicensePage = async () => {
-  const data = await getData();
+
+  const data = await res.json();
   let i = 0;
 
   return (
