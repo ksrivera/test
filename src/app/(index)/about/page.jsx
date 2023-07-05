@@ -12,7 +12,7 @@ const getData = async () => {
   return res.json();
 } 
 
-const EventPage = () => {
+const EventPage = async () => {
 
   const data = await getData();
 
