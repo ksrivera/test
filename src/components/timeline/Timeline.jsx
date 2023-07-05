@@ -18,7 +18,7 @@ import useSWR from 'swr'
 const fetcher = (...args) => fetch(...args).then((res) => res.json())
 
 const Timeline = async () => {
-    const { data, error } = useSWR('ucode-clinic-97nrg31rm-ksrivera.vercel.app/api/timeline', fetcher)
+    const { data, error } = useSWR('http://localhost:3000/api/timeline', fetcher)
 
     let i = 0;
     
