@@ -19,7 +19,7 @@ export default async function LicensePage(){
         </section>
         <div className='bg-green-200 pt-10'>
             {data.map(item => (
-                <div className='max-w-screen-2xl mx-auto pb-10' keys={item.title}>
+                <div className='max-w-screen-2xl mx-auto pb-10' key={item.title}>
                     <p className="mb-3 text-lg  md:text-xl text-green-500"><strong>{item.title}</strong></p>
                     <p className="text-gray-500">{item.description}</p>
                 </div>
