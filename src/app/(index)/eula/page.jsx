@@ -20,7 +20,7 @@ const getData = async () => {
 
 const LicensePage = async () => {
   //const { data, error } = useSWR('/api/eula', fetcher);
-  const data = getData();
+  const data = await getData();
   let i = 0;
 
   return (
