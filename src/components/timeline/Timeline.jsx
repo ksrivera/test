@@ -1,6 +1,9 @@
 'use client'
 
-const getData = async () => {
+
+import useSWR from 'swr'
+
+/* const getData = async () => {
     const res = await fetch('http://localhost:3000/api/timeline', {
         next: { revalidate: 10 }
     });
@@ -10,12 +13,13 @@ const getData = async () => {
     }
 
     return res.json();
-}
+} */
+
+const fetcher = (...args) => fetch(...args).then((res) => res.json())
 
 const Timeline = async () => {
-    let data = null;
-    data = await getData();
-    console.log(data);
+    const { data, error } = useSWR('ucode-clinic-97nrg31rm-ksrivera.vercel.app/api/timeline', fetcher)
+
     let i = 0;
     
   return (
