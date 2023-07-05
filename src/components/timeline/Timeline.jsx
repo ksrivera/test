@@ -19,7 +19,7 @@ const getData = async () => {
 
 const Timeline = async () => {
     //const { data, error } = useSWR('http://localhost:3000/api/timeline', fetcher)
-    const data = getData();
+    const data = await getData();
     let i = 0;
     
   return (
