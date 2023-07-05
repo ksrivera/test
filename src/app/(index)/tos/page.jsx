@@ -2,13 +2,6 @@
 
 import BackToTop from "@/components/BackToTop/BackToTop";
 
-export async function generateMetadata({ params }) {
-  return {
-    title: 'Terms & Conditions | UCode Clinic',
-    description: 'UCode Clinic Terms & Conditions Page'
-  }
-}
-
 const getData = async () => {
   const res = await fetch('http://localhost:3000/api/tos', {
     next: { revalidate: 10 }
